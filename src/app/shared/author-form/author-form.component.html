@@ -1,0 +1,18 @@
+<!--  -->
+
+<mat-dialog-content>
+  <div class="author-form" [formGroup]="authorForm">
+    <mat-form-field class="form-field">
+      <mat-label>Enter your name</mat-label>
+      <input matInput formControlName="name" placeholder="John Doe" />
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <mat-label>Your contacts</mat-label>
+      <textarea matInput formControlName="contacts" placeholder="Enter your contacts"></textarea>
+    </mat-form-field>
+    <div class="comment-form__buttons">
+      <button mat-stroked-button color="primary" mat-dialog-close (click)="saveAuthor()">submit</button>
+      <button mat-stroked-button color="warn" mat-dialog-close (click)="cancel()">cancel</button>
+    </div>
+  </div>
+</mat-dialog-content>

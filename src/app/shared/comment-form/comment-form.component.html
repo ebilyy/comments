@@ -1,0 +1,12 @@
+<div class="comment-form" *ngIf="state.isCommenting" [formGroup]="commentForm">
+  <!-- <input type="text" formControlName="text"> -->
+  <mat-form-field class="form-field">
+    <mat-label>Leave your comment</mat-label>
+    <textarea matInput formControlName="text" placeholder="Hello! this the best page I've  ever seen!"></textarea>
+  </mat-form-field>
+  <div class="comment-form__buttons">
+    <button mat-stroked-button color="primary" (click)="sendData()">submit</button>
+    <button mat-stroked-button color="warn" (click)="cancel()">cancel</button>
+  </div>
+  <hr>
+</div>

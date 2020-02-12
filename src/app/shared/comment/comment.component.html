@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{data.author}}</mat-card-title>
+
+    <mat-card-subtitle>{{data.time}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{data.text}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-stroked-button color="primary" (click)="comment()">comment</button>
+    <button mat-stroked-button color="warn" (click)="delete()">delete</button>
+    <!-- <button mat-stroked-button color="accent">update</button> -->
+    <app-comment-form *ngIf="activeCommentID === data._id"></app-comment-form>
+  </mat-card-actions>
+  <!-- <div>{{data.sub_comments.length}}</div> -->
+  <div class="nested__comments" *ngIf="data.sub_comments.length">
+    <app-comment *ngFor="let comment of data.sub_comments" [data]="comment"></app-comment>
+  </div>
+</mat-card>

@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+
+  <mat-toolbar-row>
+
+    <div class="toolbar" *ngIf="authorData">
+      <span>{{authorData.name}}</span>
+      <span>{{authorData.contacts}}</span>
+      <button mat-flat-button (click)="openDialog()">Change author</button>
+      <span>
+        {{year}} year
+      </span>
+    </div>
+  </mat-toolbar-row>
+
+  <!-- <mat-toolbar-row>{{new Date() | date}}</mat-toolbar-row> -->
+
+</mat-toolbar>

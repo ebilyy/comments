@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthorService } from './core/author.service';
+import { CommentsService } from './core/comments.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'frontend';
+  constructor(private authorService: AuthorService, private commentsService: CommentsService) {
+    this.authorService.init();
+    this.commentsService.init();
+  }
 }
