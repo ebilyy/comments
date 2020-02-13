@@ -3,4 +3,5 @@ export interface IComment {
   author: string;
   time: Date;
   text: string;
+  sub_comments: any;
 }
