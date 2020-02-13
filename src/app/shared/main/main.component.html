@@ -1,9 +1,0 @@
-<div class="main">
-  <div class="main__comments comments">
-    <app-comment *ngFor="let comment of (comments$ | async)" [data]="comment"></app-comment>
-    <div class="comments__actions">
-      <app-comment-form *ngIf="isVisible"></app-comment-form>
-      <button *ngIf="!isVisible" mat-flat-button color="primary" (click)="showForm()">add new comment</button>
-    </div>
-  </div>
-</div>
